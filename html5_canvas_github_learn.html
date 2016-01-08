@@ -20,7 +20,7 @@
         	context=canvas.getContext('2d');
 			
 			initBall();
-			initBox();
+			initBoxes();
         } else {
         	//add anything you want for non-compliant browsers
         }
@@ -36,15 +36,19 @@
 		ball.drawBall();
 	}
 	
-	function initBox(){
+	function initBoxes(){
 		var xLocation = 100;
 		var yLocation = 80;
 		var boxSize = 100;
-		//var boxColor = '#f66';
-		var boxColors = ['#f33', '#fcc'];
+		var boxColor = '#6f6';
 		
-		box = Box(context, xLocation, yLocation, boxSize, boxColors, 'radial');
-		box.drawBox();
+		boxSolid = Box(context, xLocation, yLocation, boxSize, boxColor, 'solid');
+		boxSolid.drawBox();
+		
+		xLocation = 600;
+		var boxColors = ['#f33', '#fcc'];
+		boxRadial = Box(context, xLocation, yLocation, boxSize, boxColors, 'radial');
+		boxRadial.drawBox();
 	}
 </script>
 
