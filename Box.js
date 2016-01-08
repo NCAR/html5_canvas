@@ -1,12 +1,12 @@
-//var Box = function(boxContext, x, y, boxRadius, boxColors, boxFillStyle) {
+var Box = function(boxContext, x, y, boxSize, boxColors, boxFillStyle) {
 
-var Box = function(boxContext, x, y, boxSize, boxColors) {
+//var Box = function(boxContext, x, y, boxSize, boxColors) {
 	var _x = x;
 	var _y = y;
 	var _size = boxSize;
 	var _boxColors = boxColors;
 	var _context = boxContext;
-	//var _boxFillStyle = boxFillStyle;
+	var _boxFillStyle = boxFillStyle;
 	
 	// Single color for solid fill, gradient object for linear or radial gradient fill
 	var _fill; 
@@ -30,6 +30,8 @@ var Box = function(boxContext, x, y, boxSize, boxColors) {
 				default: // Solid color fill (no gradient)
 					_fill = _boxColors;
 			}*/
+			
+			alert('Box fill style: ' + _boxFillStyle);
 			
 			// Solid color fill (no gradient)
 			_fill = _boxColors;
