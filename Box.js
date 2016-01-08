@@ -1,6 +1,4 @@
 var Box = function(boxContext, x, y, boxSize, boxColors, boxFillStyle) {
-
-//var Box = function(boxContext, x, y, boxSize, boxColors) {
 	var _x = x;
 	var _y = y;
 	var _size = boxSize;
@@ -13,31 +11,26 @@ var Box = function(boxContext, x, y, boxSize, boxColors, boxFillStyle) {
 	
 	return {
 		drawBox : function() {
-			//_context.beginPath();
-			//_context.arc(_x, _y, _radius, 0, Math.PI*2, true);
 			
-			/*switch (_boxFillStyle) {
+			switch (_boxFillStyle) {
 				case 'radial': // Radial gradient fill
-					_fill = _context.createRadialGradient(_x, _y, 0, _x, _y, _radius);
+					var xCenter = _x + 0.5*_size;
+					var yCenter = _y + 0.5*_size;
+					var gradientSize = 0.5 * Math.SQRT2 * _size;
+					_fill = _context.createRadialGradient(xCenter, yCenter, 0, xCenter, yCenter, gradientSize);
 					_fill.addColorStop(0, _boxColors[0]);
 					_fill.addColorStop(1, _boxColors[1]);
 					break;
 				case 'linear': // Linear (horizontal or side-to-side) gradient fill
-					_fill = _context.createLinearGradient(_x - _radius, _y, _x + _radius, _y);
+					_fill = _context.createLinearGradient(_x - _size, _y, _x + _size, _y);
 					_fill.addColorStop(0, _boxColors[0]);
 					_fill.addColorStop(1, _boxColors[1]);
 					break;
 				default: // Solid color fill (no gradient)
 					_fill = _boxColors;
-			}*/
-			
-			alert('Box fill style: ' + _boxFillStyle);
-			
-			// Solid color fill (no gradient)
-			_fill = _boxColors;
+			}
 			
 			_context.fillStyle = _fill;
-			//_context.fill();
 			
 			// Draw a rectangle (xPosition, yPos, width, height)
         	_context.fillRect (_x, _y, _size, _size);

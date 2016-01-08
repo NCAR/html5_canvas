@@ -37,13 +37,13 @@
 	}
 	
 	function initBox(){
-		var xLocation = 200;
+		var xLocation = 100;
 		var yLocation = 80;
 		var boxSize = 100;
-		var boxColor = '#f66';
-		//var boxColors = ['#fff', '#999'];
+		//var boxColor = '#f66';
+		var boxColors = ['#f33', '#fcc'];
 		
-		box = Box(context, xLocation, yLocation, boxSize, boxColor, 'solid');
+		box = Box(context, xLocation, yLocation, boxSize, boxColors, 'radial');
 		box.drawBox();
 	}
 </script>
@@ -68,7 +68,7 @@
     
     <p>The canvas above should contain a ball and a box.</p>
     
-    <p>Next on my to do list: make boxes with gradient fills.</p>
+    <p>Next on my to do list: make boxes with linear gradient fills.</p>
     
 	</body>
 </html>
