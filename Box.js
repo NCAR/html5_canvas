@@ -22,7 +22,7 @@ var Box = function(boxContext, x, y, boxSize, boxColors, boxFillStyle) {
 					_fill.addColorStop(1, _boxColors[1]);
 					break;
 				case 'linear': // Linear (horizontal or side-to-side) gradient fill
-					_fill = _context.createLinearGradient(_x - _size, _y, _x + _size, _y);
+					_fill = _context.createLinearGradient(_x, _y, _x + _size, _y);
 					_fill.addColorStop(0, _boxColors[0]);
 					_fill.addColorStop(1, _boxColors[1]);
 					break;

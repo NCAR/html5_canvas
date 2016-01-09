@@ -46,9 +46,14 @@
 		boxSolid.drawBox();
 		
 		xLocation = 600;
-		var boxColors = ['#f33', '#fcc'];
+		var boxColors = ['#f33', '#33f'];
 		boxRadial = Box(context, xLocation, yLocation, boxSize, boxColors, 'radial');
 		boxRadial.drawBox();
+		
+		yLocation = 400;
+		boxColors = ['#f33', '#33f'];
+		boxLinear = Box(context, xLocation, yLocation, boxSize, boxColors, 'linear');
+		boxLinear.drawBox();
 	}
 </script>
 
